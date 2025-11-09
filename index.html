@@ -18,14 +18,14 @@
             --bg-alt: #000000;
             --bg-card: #000000;
             --text-primary: #FFFFFF;
-            --text-secondary: #86868B;
-            --accent: #0071E3;
-            --accent-alt: #0071E3;
-            --accent-dark: #0051D5;
-            --accent-glow: rgba(0, 113, 227, 0.08);
-            --border: rgba(255, 255, 255, 0.12);
-            --gradient-1: linear-gradient(135deg, #0071E3 0%, #0051D5 100%);
-            --gradient-2: linear-gradient(135deg, rgba(0, 113, 227, 0.03) 0%, rgba(0, 81, 213, 0.01) 100%);
+            --text-secondary: #6E6E73;
+            --accent: #86868B;
+            --accent-alt: #A1A1A6;
+            --accent-dark: #6E6E73;
+            --accent-glow: rgba(255, 255, 255, 0.05);
+            --border: rgba(255, 255, 255, 0.15);
+            --gradient-1: linear-gradient(135deg, #FFFFFF 0%, #A1A1A6 100%);
+            --gradient-2: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
         }
 
         html {
@@ -121,25 +121,26 @@
         .btn {
             display: inline-block;
             padding: 14px 28px;
-            background: var(--accent);
-            color: #FFFFFF;
+            background: transparent;
+            color: var(--text-primary);
             text-decoration: none;
-            border-radius: 22px;
+            border-radius: 0;
             font-size: 17px;
             font-weight: 400;
             letter-spacing: -0.022em;
             transition: all 0.2s ease;
-            border: none;
+            border: 1px solid var(--border);
             position: relative;
             animation: fadeInUp 1s ease-out 0.6s both;
         }
 
         .btn:hover {
-            background: var(--accent-alt);
+            border-color: var(--text-primary);
+            background: rgba(255, 255, 255, 0.05);
         }
 
         .btn:active {
-            opacity: 0.8;
+            opacity: 0.7;
         }
 
         /* Sections - Jobs Style */
@@ -257,9 +258,9 @@
         }
 
         .client-item:hover {
-            border-color: var(--accent);
+            border-color: var(--text-primary);
             color: var(--text-primary);
-            background: rgba(255, 255, 255, 0.02);
+            background: rgba(255, 255, 255, 0.03);
         }
 
         /* Current Section */
@@ -395,8 +396,8 @@
 
         table td:last-child {
             padding-right: 0;
-            color: var(--accent);
-            font-weight: 400;
+            color: var(--text-primary);
+            font-weight: 500;
             text-align: right;
             white-space: nowrap;
         }
@@ -410,7 +411,7 @@
         }
 
         table tbody tr:hover td:last-child {
-            color: var(--accent);
+            color: var(--text-primary);
         }
 
         /* Career Timeline */
@@ -447,8 +448,9 @@
             width: 12px;
             height: 12px;
             border-radius: 0;
-            background: var(--accent);
+            background: var(--text-primary);
             border: 2px solid var(--bg-color);
+            opacity: 0.4;
             z-index: 1;
         }
 
@@ -531,9 +533,10 @@
         .step-number {
             font-size: 48px;
             font-weight: 600;
-            color: var(--accent);
+            color: var(--text-primary);
             line-height: 1;
             letter-spacing: -0.005em;
+            opacity: 0.6;
         }
 
         .step-content strong {
@@ -565,7 +568,7 @@
 
         .contact-links a {
             font-size: 21px;
-            color: var(--accent);
+            color: var(--text-primary);
             text-decoration: none;
             padding: 0;
             border: none;
@@ -577,7 +580,7 @@
         }
 
         .contact-links a:hover {
-            opacity: 0.7;
+            opacity: 0.6;
         }
 
         .divider {
@@ -809,7 +812,7 @@
                 <div>
                     <p class="section-intro"><strong>Яков Васильев</strong>. Стратег, исследователь и консультант по AI. Пятнадцать лет на стыке стратегии, культуры и технологий.</p>
                     <p class="about-text">Путь от аналитика до директора по стратегии в крупнейших международных агентствах. Управлял стратегическим департаментом в <strong>Havas Creative Group</strong>. Работал в <strong>Leo Burnett</strong> и <strong>Louder</strong> над проектами, где решения влияют на миллионы людей. Получал и судил награды в России и Crystal Festival. Помогаю брендам выстраивать смысловую структуру бизнеса. Решения рождаются из понимания, а не из шума.</p>
-                    <p class="about-text" style="margin-top: 24px; color: var(--accent); font-weight: 500;">Награды: Silver Mercury, Effie, Crystal Festival (получение и судейство), BEMA</p>
+                    <p class="about-text" style="margin-top: 24px; color: var(--text-primary); font-weight: 500;">Награды: Silver Mercury, Effie, Crystal Festival (получение и судейство), BEMA</p>
                 </div>
                 <div>
                     <p class="about-text">Работал в агентствах <strong>Havas Creative Group, Louder, Leo Burnett</strong>.</p>
