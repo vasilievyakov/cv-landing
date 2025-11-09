@@ -14,20 +14,18 @@
         }
 
         :root {
-            --bg-color: #0A0F0A;
-            --bg-alt: #141914;
-            --bg-card: #1A241A;
-            --text-primary: #F0F5F0;
-            --text-secondary: #8B9E8B;
-            --accent: #00FF88;
-            --accent-alt: #00E677;
-            --accent-dark: #00CC66;
-            --accent-glow: rgba(0, 255, 136, 0.25);
-            --border: rgba(0, 255, 136, 0.12);
-            --gradient-1: linear-gradient(135deg, #00FF88 0%, #00E677 50%, #00CC66 100%);
-            --gradient-2: linear-gradient(135deg, rgba(0, 255, 136, 0.15) 0%, rgba(0, 230, 119, 0.08) 100%);
-            --green-dark: #004D2E;
-            --green-light: #33FFAA;
+            --bg-color: #000000;
+            --bg-alt: #1D1D1F;
+            --bg-card: #1D1D1F;
+            --text-primary: #F5F5F7;
+            --text-secondary: #86868B;
+            --accent: #30D158;
+            --accent-alt: #34C759;
+            --accent-dark: #28CD41;
+            --accent-glow: rgba(48, 209, 88, 0.15);
+            --border: rgba(255, 255, 255, 0.1);
+            --gradient-1: linear-gradient(135deg, #30D158 0%, #34C759 100%);
+            --gradient-2: linear-gradient(135deg, rgba(48, 209, 88, 0.1) 0%, rgba(52, 199, 89, 0.05) 100%);
         }
 
         html {
@@ -76,7 +74,7 @@
             align-items: center;
             justify-content: center;
             position: relative;
-            padding: 160px 0;
+            padding: 120px 0;
             overflow: hidden;
         }
 
@@ -148,7 +146,7 @@
 
         /* Sections - Apple Style */
         section {
-            padding: 100px 0;
+            padding: 80px 0;
             position: relative;
             opacity: 0;
             transform: translateY(40px);
@@ -175,7 +173,7 @@
             font-size: 48px;
             font-weight: 600;
             line-height: 1.08349;
-            margin-bottom: 20px;
+            margin-bottom: 12px;
             letter-spacing: -0.003em;
             position: relative;
             display: block;
@@ -208,7 +206,7 @@
             font-size: 21px;
             line-height: 1.381;
             color: var(--text-primary);
-            margin-bottom: 19px;
+            margin-bottom: 40px;
             max-width: 600px;
             font-weight: 400;
             letter-spacing: 0.011em;
@@ -220,7 +218,7 @@
             grid-template-columns: 1fr 1fr;
             gap: 60px;
             align-items: start;
-            margin-top: 60px;
+            margin-top: 40px;
         }
 
         .about-text {
@@ -240,36 +238,36 @@
         .clients-section::before {
             content: '';
             position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 800px;
-            height: 800px;
+            top: -30%;
+            right: -15%;
+            width: 600px;
+            height: 600px;
             background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
             border-radius: 50%;
-            opacity: 0.3;
+            opacity: 0.2;
             z-index: 0;
         }
 
         .clients-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-top: 60px;
+            gap: 16px;
+            margin-top: 40px;
             position: relative;
             z-index: 1;
         }
 
         .client-item {
-            padding: 28px 24px;
+            padding: 20px 16px;
             background: var(--bg-card);
             border: 1px solid var(--border);
-            border-radius: 16px;
+            border-radius: 12px;
             font-size: 17px;
             color: var(--text-secondary);
             text-align: center;
             font-weight: 400;
             letter-spacing: -0.022em;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
         }
@@ -290,8 +288,8 @@
         .client-item:hover {
             border-color: var(--accent);
             color: var(--text-primary);
-            transform: translateY(-4px);
-            box-shadow: 0 12px 32px rgba(0, 255, 136, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(48, 209, 88, 0.15);
         }
 
         .client-item:hover::before {
@@ -307,8 +305,8 @@
         .current-items {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 32px;
-            margin-top: 60px;
+            gap: 24px;
+            margin-top: 40px;
         }
 
         .current-item {
@@ -345,7 +343,7 @@
             border-radius: 0;
             border: none;
             position: relative;
-            margin: 60px 0 0 0;
+            margin: 40px 0 0 0;
             font-size: 28px;
             line-height: 1.14286;
             color: var(--text-primary);
@@ -372,12 +370,12 @@
             background: transparent;
             border-radius: 0;
             padding: 0;
-            margin: 60px 0 0 0;
+            margin: 40px 0 0 0;
         }
 
         .table-wrapper {
             overflow-x: auto;
-            margin: 60px 0 0 0;
+            margin: 40px 0 0 0;
             border-radius: 0;
             background: transparent;
             border: none;
@@ -465,7 +463,7 @@
         /* Career Timeline */
         .career-timeline {
             position: relative;
-            margin: 60px 0 0 0;
+            margin: 40px 0 0 0;
             padding-left: 40px;
         }
 
@@ -481,7 +479,7 @@
 
         .career-step {
             position: relative;
-            margin-bottom: 60px;
+            margin-bottom: 48px;
             padding-left: 48px;
         }
 
@@ -558,14 +556,14 @@
         /* Process Section */
         .process-steps {
             display: grid;
-            gap: 40px;
-            margin: 60px 0 0 0;
+            gap: 32px;
+            margin: 40px 0 0 0;
         }
 
         .process-step {
             display: grid;
             grid-template-columns: 60px 1fr;
-            gap: 32px;
+            gap: 24px;
             padding: 0;
             background: transparent;
             border-radius: 0;
@@ -599,7 +597,7 @@
         .contacts {
             background: transparent;
             border-radius: 0;
-            padding: 100px 0;
+            padding: 80px 0;
             text-align: center;
             border: none;
         }
@@ -632,7 +630,7 @@
         .divider {
             height: 1px;
             background: var(--border);
-            margin: 120px 0;
+            margin: 80px 0;
             border: none;
         }
 
@@ -675,7 +673,7 @@
 
         /* Philosophy Quote */
         .philosophy-quote {
-            margin-top: 60px;
+            margin-top: 40px;
             padding: 0;
             background: transparent;
             border-radius: 0;
