@@ -15,17 +15,17 @@
 
         :root {
             --bg-color: #000000;
-            --bg-alt: #1D1D1F;
-            --bg-card: #1D1D1F;
-            --text-primary: #F5F5F7;
-            --text-secondary: #86868B;
-            --accent: #30D158;
-            --accent-alt: #34C759;
-            --accent-dark: #28CD41;
-            --accent-glow: rgba(48, 209, 88, 0.15);
+            --bg-alt: #000000;
+            --bg-card: #000000;
+            --text-primary: #FFFFFF;
+            --text-secondary: #A1A1A6;
+            --accent: #007AFF;
+            --accent-alt: #0051D5;
+            --accent-dark: #0040CC;
+            --accent-glow: rgba(0, 122, 255, 0.1);
             --border: rgba(255, 255, 255, 0.1);
-            --gradient-1: linear-gradient(135deg, #30D158 0%, #34C759 100%);
-            --gradient-2: linear-gradient(135deg, rgba(48, 209, 88, 0.1) 0%, rgba(52, 199, 89, 0.05) 100%);
+            --gradient-1: linear-gradient(135deg, #007AFF 0%, #0051D5 100%);
+            --gradient-2: linear-gradient(135deg, rgba(0, 122, 255, 0.05) 0%, rgba(0, 81, 213, 0.02) 100%);
         }
 
         html {
@@ -62,19 +62,19 @@
         }
 
         .container {
-            max-width: 1024px;
+            max-width: 980px;
             margin: 0 auto;
-            padding: 0 22px;
+            padding: 0 20px;
         }
 
-        /* Hero Section - Apple Style */
+        /* Hero Section - Jobs Style */
         .hero {
-            min-height: 90vh;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
-            padding: 120px 0;
+            padding: 0;
             overflow: hidden;
         }
 
@@ -86,50 +86,49 @@
         }
 
         .hero h1 {
-            font-size: 56px;
+            font-size: 80px;
             font-weight: 600;
-            line-height: 1.07143;
-            margin-bottom: 6px;
-            letter-spacing: -0.005em;
+            line-height: 1.05;
+            margin-bottom: 20px;
+            letter-spacing: -0.015em;
             color: var(--text-primary);
             animation: fadeInUp 1s ease-out;
         }
 
         .hero-tagline {
-            font-size: 28px;
+            font-size: 32px;
             font-weight: 400;
-            line-height: 1.14286;
-            margin-bottom: 19px;
+            line-height: 1.125;
+            margin-bottom: 30px;
             color: var(--text-secondary);
-            letter-spacing: 0.007em;
+            letter-spacing: 0.004em;
             animation: fadeInUp 1s ease-out 0.2s both;
         }
 
         .hero-description {
-            font-size: 21px;
-            line-height: 1.381;
-            margin-bottom: 40px;
+            font-size: 24px;
+            line-height: 1.45833;
+            margin-bottom: 50px;
             color: var(--text-secondary);
-            max-width: 600px;
+            max-width: 680px;
             margin-left: auto;
             margin-right: auto;
             font-weight: 400;
+            letter-spacing: 0.011em;
             animation: fadeInUp 1s ease-out 0.4s both;
         }
 
         .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 22px;
+            display: inline-block;
+            padding: 14px 28px;
             background: var(--accent);
             color: #FFFFFF;
             text-decoration: none;
-            border-radius: 980px;
+            border-radius: 22px;
             font-size: 17px;
             font-weight: 400;
             letter-spacing: -0.022em;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.2s ease;
             border: none;
             position: relative;
             animation: fadeInUp 1s ease-out 0.6s both;
@@ -137,16 +136,15 @@
 
         .btn:hover {
             background: var(--accent-alt);
-            transform: scale(1.05);
         }
 
         .btn:active {
-            transform: scale(0.98);
+            opacity: 0.8;
         }
 
-        /* Sections - Apple Style */
+        /* Sections - Jobs Style */
         section {
-            padding: 80px 0;
+            padding: 120px 0;
             position: relative;
             opacity: 0;
             transform: translateY(40px);
@@ -170,11 +168,11 @@
         }
 
         h2 {
-            font-size: 48px;
+            font-size: 56px;
             font-weight: 600;
-            line-height: 1.08349;
-            margin-bottom: 12px;
-            letter-spacing: -0.003em;
+            line-height: 1.07143;
+            margin-bottom: 20px;
+            letter-spacing: -0.005em;
             position: relative;
             display: block;
             color: var(--text-primary);
@@ -203,22 +201,22 @@
         }
 
         .section-intro {
-            font-size: 21px;
-            line-height: 1.381;
+            font-size: 28px;
+            line-height: 1.14286;
             color: var(--text-primary);
-            margin-bottom: 40px;
-            max-width: 600px;
+            margin-bottom: 60px;
+            max-width: 680px;
             font-weight: 400;
-            letter-spacing: 0.011em;
+            letter-spacing: 0.007em;
         }
 
         /* About Section */
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            gap: 80px;
             align-items: start;
-            margin-top: 40px;
+            margin-top: 60px;
         }
 
         .about-text {
@@ -228,85 +226,47 @@
             letter-spacing: -0.022em;
         }
 
-        /* Clients Section - Modern & Sophisticated */
+        /* Clients Section - Jobs Style */
         .clients-section {
-            background: linear-gradient(180deg, var(--bg-color) 0%, var(--bg-alt) 100%);
+            background: var(--bg-color);
             position: relative;
             overflow: hidden;
         }
 
-        .clients-section::before {
-            content: '';
-            position: absolute;
-            top: -30%;
-            right: -15%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
-            border-radius: 50%;
-            opacity: 0.2;
-            z-index: 0;
-        }
-
         .clients-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 16px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+            margin-top: 60px;
             position: relative;
             z-index: 1;
         }
 
         .client-item {
-            padding: 20px 16px;
-            background: var(--bg-card);
+            padding: 32px 24px;
+            background: transparent;
             border: 1px solid var(--border);
-            border-radius: 12px;
-            font-size: 17px;
+            border-radius: 0;
+            font-size: 19px;
             color: var(--text-secondary);
             text-align: center;
             font-weight: 400;
-            letter-spacing: -0.022em;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            letter-spacing: -0.019em;
+            transition: all 0.2s ease;
             position: relative;
-            overflow: hidden;
-        }
-
-        .client-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: var(--gradient-1);
-            opacity: 0.1;
-            transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            z-index: 0;
         }
 
         .client-item:hover {
             border-color: var(--accent);
             color: var(--text-primary);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(48, 209, 88, 0.15);
-        }
-
-        .client-item:hover::before {
-            left: 0;
-        }
-
-        .client-item > * {
-            position: relative;
-            z-index: 1;
         }
 
         /* Current Section */
         .current-items {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 24px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
         }
 
         .current-item {
@@ -314,68 +274,60 @@
             background: transparent;
             border: none;
             border-radius: 0;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.2s ease;
             position: relative;
-        }
-
-        .current-item::before {
-            display: none;
-        }
-
-        .current-item:hover {
-            border-color: transparent;
         }
 
         .current-item strong {
             display: block;
-            font-size: 24px;
+            font-size: 32px;
             color: var(--text-primary);
-            margin-bottom: 8px;
+            margin-bottom: 12px;
             font-weight: 600;
-            line-height: 1.16667;
-            letter-spacing: 0.009em;
+            line-height: 1.125;
+            letter-spacing: 0.004em;
         }
 
-        /* Quote Section - Apple Style */
+        /* Quote Section - Jobs Style */
         .quote {
             padding: 0;
             background: transparent;
             border-radius: 0;
             border: none;
             position: relative;
-            margin: 40px 0 0 0;
-            font-size: 28px;
-            line-height: 1.14286;
+            margin: 60px 0 0 0;
+            font-size: 32px;
+            line-height: 1.125;
             color: var(--text-primary);
             font-weight: 400;
-            letter-spacing: 0.007em;
+            letter-spacing: 0.004em;
         }
 
         .quote p {
-            margin-bottom: 19px;
-            font-size: 28px;
-            line-height: 1.14286;
+            margin-bottom: 30px;
+            font-size: 32px;
+            line-height: 1.125;
             position: relative;
             z-index: 1;
             font-weight: 400;
-            letter-spacing: 0.007em;
+            letter-spacing: 0.004em;
         }
 
         .quote p:last-child {
             margin-bottom: 0;
         }
 
-        /* Formats Table - Apple Style */
+        /* Formats Table - Jobs Style */
         .formats-section {
             background: transparent;
             border-radius: 0;
             padding: 0;
-            margin: 40px 0 0 0;
+            margin: 60px 0 0 0;
         }
 
         .table-wrapper {
             overflow-x: auto;
-            margin: 40px 0 0 0;
+            margin: 60px 0 0 0;
             border-radius: 0;
             background: transparent;
             border: none;
@@ -394,13 +346,13 @@
         }
 
         table th {
-            padding: 12px 0;
+            padding: 16px 0;
             text-align: left;
             font-weight: 400;
             color: var(--text-secondary);
-            font-size: 14px;
+            font-size: 17px;
             text-transform: none;
-            letter-spacing: -0.016em;
+            letter-spacing: -0.022em;
             border-bottom: 1px solid var(--border);
             background: transparent;
         }
@@ -424,13 +376,13 @@
         }
 
         table td {
-            padding: 20px 0;
+            padding: 24px 0;
             color: var(--text-secondary);
             vertical-align: top;
-            font-size: 17px;
-            line-height: 1.47059;
+            font-size: 19px;
+            line-height: 1.47368;
             font-weight: 400;
-            letter-spacing: -0.022em;
+            letter-spacing: -0.019em;
         }
 
         table td:first-child {
@@ -463,7 +415,7 @@
         /* Career Timeline */
         .career-timeline {
             position: relative;
-            margin: 40px 0 0 0;
+            margin: 60px 0 0 0;
             padding-left: 40px;
         }
 
@@ -479,7 +431,7 @@
 
         .career-step {
             position: relative;
-            margin-bottom: 48px;
+            margin-bottom: 60px;
             padding-left: 48px;
         }
 
@@ -513,30 +465,30 @@
 
         .career-content strong {
             display: block;
-            font-size: 24px;
+            font-size: 32px;
             color: var(--text-primary);
-            margin-bottom: 4px;
+            margin-bottom: 8px;
             font-weight: 600;
-            line-height: 1.16667;
-            letter-spacing: 0.009em;
+            line-height: 1.125;
+            letter-spacing: 0.004em;
         }
 
         .career-role {
-            font-size: 19px;
+            font-size: 21px;
             color: var(--text-secondary);
-            margin-bottom: 12px;
+            margin-bottom: 16px;
             font-weight: 400;
-            line-height: 1.21053;
-            letter-spacing: 0.012em;
+            line-height: 1.381;
+            letter-spacing: 0.011em;
         }
 
         .career-content p {
-            font-size: 17px;
-            line-height: 1.47059;
+            font-size: 19px;
+            line-height: 1.47368;
             color: var(--text-secondary);
             margin-bottom: 0;
             font-weight: 400;
-            letter-spacing: -0.022em;
+            letter-spacing: -0.019em;
         }
 
         .career-content p:last-child {
@@ -556,19 +508,19 @@
         /* Process Section */
         .process-steps {
             display: grid;
-            gap: 32px;
-            margin: 40px 0 0 0;
+            gap: 50px;
+            margin: 60px 0 0 0;
         }
 
         .process-step {
             display: grid;
-            grid-template-columns: 60px 1fr;
-            gap: 24px;
+            grid-template-columns: 80px 1fr;
+            gap: 40px;
             padding: 0;
             background: transparent;
             border-radius: 0;
             border: none;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.2s ease;
         }
 
         .process-step:hover {
@@ -576,28 +528,28 @@
         }
 
         .step-number {
-            font-size: 32px;
+            font-size: 48px;
             font-weight: 600;
             color: var(--accent);
             line-height: 1;
-            letter-spacing: -0.003em;
+            letter-spacing: -0.005em;
         }
 
         .step-content strong {
             display: block;
-            font-size: 24px;
+            font-size: 32px;
             color: var(--text-primary);
-            margin-bottom: 4px;
+            margin-bottom: 12px;
             font-weight: 600;
-            line-height: 1.16667;
-            letter-spacing: 0.009em;
+            line-height: 1.125;
+            letter-spacing: 0.004em;
         }
 
-        /* Contacts - Apple Style */
+        /* Contacts - Jobs Style */
         .contacts {
             background: transparent;
             border-radius: 0;
-            padding: 80px 0;
+            padding: 120px 0;
             text-align: center;
             border: none;
         }
@@ -611,26 +563,26 @@
         }
 
         .contact-links a {
-            font-size: 17px;
+            font-size: 21px;
             color: var(--accent);
             text-decoration: none;
             padding: 0;
             border: none;
             border-radius: 0;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            letter-spacing: -0.022em;
+            transition: all 0.2s ease;
+            letter-spacing: 0.011em;
             font-weight: 400;
             text-transform: none;
         }
 
         .contact-links a:hover {
-            opacity: 0.8;
+            opacity: 0.7;
         }
 
         .divider {
             height: 1px;
             background: var(--border);
-            margin: 80px 0;
+            margin: 120px 0;
             border: none;
         }
 
@@ -673,7 +625,7 @@
 
         /* Philosophy Quote */
         .philosophy-quote {
-            margin-top: 40px;
+            margin-top: 60px;
             padding: 0;
             background: transparent;
             border-radius: 0;
@@ -681,9 +633,11 @@
         }
 
         .philosophy-quote p {
-            font-size: 18px;
-            line-height: 1.8;
+            font-size: 24px;
+            line-height: 1.45833;
             color: var(--text-primary);
+            font-weight: 400;
+            letter-spacing: 0.011em;
         }
 
         /* Responsive */
