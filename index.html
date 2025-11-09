@@ -14,20 +14,20 @@
         }
 
         :root {
-            --bg-color: #0A0A0F;
-            --bg-alt: #14141A;
-            --bg-card: #1A1A24;
-            --text-primary: #F0F0F5;
-            --text-secondary: #8B8B9E;
-            --accent: #00D9A5;
-            --accent-alt: #00B894;
-            --accent-dark: #008F6F;
-            --accent-glow: rgba(0, 217, 165, 0.2);
-            --border: rgba(255, 255, 255, 0.08);
-            --gradient-1: linear-gradient(135deg, #00D9A5 0%, #00B894 50%, #008F6F 100%);
-            --gradient-2: linear-gradient(135deg, rgba(0, 217, 165, 0.12) 0%, rgba(0, 184, 148, 0.06) 100%);
-            --purple-accent: #8B5CF6;
-            --blue-accent: #3B82F6;
+            --bg-color: #0A0F0A;
+            --bg-alt: #141914;
+            --bg-card: #1A241A;
+            --text-primary: #F0F5F0;
+            --text-secondary: #8B9E8B;
+            --accent: #00FF88;
+            --accent-alt: #00E677;
+            --accent-dark: #00CC66;
+            --accent-glow: rgba(0, 255, 136, 0.25);
+            --border: rgba(0, 255, 136, 0.12);
+            --gradient-1: linear-gradient(135deg, #00FF88 0%, #00E677 50%, #00CC66 100%);
+            --gradient-2: linear-gradient(135deg, rgba(0, 255, 136, 0.15) 0%, rgba(0, 230, 119, 0.08) 100%);
+            --green-dark: #004D2E;
+            --green-light: #33FFAA;
         }
 
         html {
@@ -218,14 +218,16 @@
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 50px;
+            gap: 60px;
             align-items: start;
-            margin-top: 40px;
+            margin-top: 60px;
         }
 
         .about-text {
-            font-size: 18px;
-            line-height: 1.8;
+            font-size: 17px;
+            line-height: 1.47059;
+            font-weight: 400;
+            letter-spacing: -0.022em;
         }
 
         /* Clients Section - Modern & Sophisticated */
@@ -250,18 +252,18 @@
 
         .clients-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 16px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
             margin-top: 60px;
             position: relative;
             z-index: 1;
         }
 
         .client-item {
-            padding: 24px;
+            padding: 28px 24px;
             background: var(--bg-card);
             border: 1px solid var(--border);
-            border-radius: 12px;
+            border-radius: 16px;
             font-size: 17px;
             color: var(--text-secondary);
             text-align: center;
@@ -289,7 +291,7 @@
             border-color: var(--accent);
             color: var(--text-primary);
             transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0, 217, 165, 0.15);
+            box-shadow: 0 12px 32px rgba(0, 255, 136, 0.2);
         }
 
         .client-item:hover::before {
@@ -305,8 +307,8 @@
         .current-items {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 24px;
-            margin-top: 40px;
+            gap: 32px;
+            margin-top: 60px;
         }
 
         .current-item {
@@ -343,7 +345,7 @@
             border-radius: 0;
             border: none;
             position: relative;
-            margin: 60px 0;
+            margin: 60px 0 0 0;
             font-size: 28px;
             line-height: 1.14286;
             color: var(--text-primary);
@@ -370,12 +372,12 @@
             background: transparent;
             border-radius: 0;
             padding: 0;
-            margin: 60px 0;
+            margin: 60px 0 0 0;
         }
 
         .table-wrapper {
             overflow-x: auto;
-            margin: 60px 0;
+            margin: 60px 0 0 0;
             border-radius: 0;
             background: transparent;
             border: none;
@@ -463,7 +465,7 @@
         /* Career Timeline */
         .career-timeline {
             position: relative;
-            margin: 60px 0;
+            margin: 60px 0 0 0;
             padding-left: 40px;
         }
 
@@ -479,8 +481,12 @@
 
         .career-step {
             position: relative;
-            margin-bottom: 48px;
+            margin-bottom: 60px;
             padding-left: 48px;
+        }
+
+        .career-step:last-child {
+            margin-bottom: 0;
         }
 
         .career-step:last-child {
@@ -556,14 +562,14 @@
         /* Process Section */
         .process-steps {
             display: grid;
-            gap: 24px;
-            margin: 40px 0;
+            gap: 40px;
+            margin: 60px 0 0 0;
         }
 
         .process-step {
             display: grid;
             grid-template-columns: 60px 1fr;
-            gap: 20px;
+            gap: 32px;
             padding: 0;
             background: transparent;
             border-radius: 0;
@@ -630,7 +636,7 @@
         .divider {
             height: 1px;
             background: var(--border);
-            margin: 100px 0;
+            margin: 120px 0;
             border: none;
         }
 
@@ -673,11 +679,11 @@
 
         /* Philosophy Quote */
         .philosophy-quote {
-            margin-top: 48px;
-            padding: 48px;
+            margin-top: 60px;
+            padding: 0;
             background: transparent;
             border-radius: 0;
-            border: 1px solid var(--border);
+            border: none;
         }
 
         .philosophy-quote p {
@@ -893,7 +899,6 @@
                 <div class="client-item">Xiaomi</div>
                 <div class="client-item">Joom</div>
                 <div class="client-item">LG</div>
-                <div class="client-item">Правительство Москвы</div>
             </div>
         </div>
     </section>
@@ -911,7 +916,6 @@
                         <strong>Havas Creative Group</strong>
                         <p class="career-role">Head of Strategy</p>
                         <p>Управление стратегическим департаментом одного из крупнейших международных агентств. Работа с глобальными брендами, где каждый проект — это вызов масштаба и сложности. Формирование стратегического мышления на уровне, где решения влияют на миллионы людей.</p>
-                        <p><strong>Клиенты:</strong> Porsche, adidas, Heineken, Bacardi, Diageo, Audi, Coca-Cola, Mars, McDonald's, Philips, BASF, Beeline, Sber, TEVA, Novartis, Ferrero, Invitro, re:Store, Qatar, Haval, Xiaomi, Joom, LG, Правительство Москвы.</p>
                     </div>
                 </div>
                 <div class="career-step">
