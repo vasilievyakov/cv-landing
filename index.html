@@ -14,18 +14,20 @@
         }
 
         :root {
-            --bg-color: #000000;
-            --bg-alt: #1D1D1F;
-            --bg-card: #1D1D1F;
-            --text-primary: #F5F5F7;
-            --text-secondary: #86868B;
-            --accent: #004225;
-            --accent-alt: #0A4D2E;
-            --accent-light: #006644;
-            --accent-glow: rgba(0, 66, 37, 0.1);
-            --border: rgba(255, 255, 255, 0.1);
-            --gradient-1: linear-gradient(135deg, #004225 0%, #0A4D2E 100%);
-            --gradient-2: linear-gradient(135deg, rgba(0, 66, 37, 0.05) 0%, rgba(10, 77, 46, 0.02) 100%);
+            --bg-color: #0A0A0F;
+            --bg-alt: #14141A;
+            --bg-card: #1A1A24;
+            --text-primary: #F0F0F5;
+            --text-secondary: #8B8B9E;
+            --accent: #00D9A5;
+            --accent-alt: #00B894;
+            --accent-dark: #008F6F;
+            --accent-glow: rgba(0, 217, 165, 0.15);
+            --border: rgba(255, 255, 255, 0.08);
+            --gradient-1: linear-gradient(135deg, #00D9A5 0%, #00B894 50%, #008F6F 100%);
+            --gradient-2: linear-gradient(135deg, rgba(0, 217, 165, 0.1) 0%, rgba(0, 184, 148, 0.05) 100%);
+            --purple-accent: #8B5CF6;
+            --blue-accent: #3B82F6;
         }
 
         html {
@@ -226,27 +228,77 @@
             line-height: 1.8;
         }
 
-        .brands {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin: 24px 0;
+        /* Clients Section - Modern & Sophisticated */
+        .clients-section {
+            background: linear-gradient(180deg, var(--bg-color) 0%, var(--bg-alt) 100%);
+            position: relative;
+            overflow: hidden;
         }
 
-        .brand-tag {
-            padding: 10px 20px;
-            background: transparent;
+        .clients-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+            border-radius: 50%;
+            opacity: 0.3;
+            z-index: 0;
+        }
+
+        .clients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+            margin-top: 60px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .client-item {
+            padding: 24px;
+            background: var(--bg-card);
             border: 1px solid var(--border);
-            border-radius: 0;
-            font-size: 14px;
+            border-radius: 12px;
+            font-size: 17px;
             color: var(--text-secondary);
-            letter-spacing: 0.02em;
-            transition: all 0.3s ease;
+            text-align: center;
+            font-weight: 400;
+            letter-spacing: -0.022em;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
         }
 
-        .brand-tag:hover {
+        .client-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-1);
+            opacity: 0.1;
+            transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 0;
+        }
+
+        .client-item:hover {
             border-color: var(--accent);
-            color: var(--accent);
+            color: var(--text-primary);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 217, 165, 0.15);
+        }
+
+        .client-item:hover::before {
+            left: 0;
+        }
+
+        .client-item {
+            position: relative;
+            z-index: 1;
         }
 
         /* Current Section */
@@ -805,34 +857,43 @@
                     <p class="about-text" style="margin-top: 24px; color: var(--accent); font-weight: 500;">Награды: Silver Mercury, Effie, Crystal Festival (получение и судейство), BEMA</p>
                 </div>
                 <div>
-                    <p class="about-text">Работал в агентствах <strong>Havas Creative Group, Louder, Leo Burnett</strong>, для брендов:</p>
-                    <div class="brands">
-                        <span class="brand-tag">Porsche</span>
-                        <span class="brand-tag">adidas</span>
-                        <span class="brand-tag">Heineken</span>
-                        <span class="brand-tag">Bacardi</span>
-                        <span class="brand-tag">Diageo</span>
-                        <span class="brand-tag">Audi</span>
-                        <span class="brand-tag">Coca-Cola</span>
-                        <span class="brand-tag">Mars</span>
-                        <span class="brand-tag">McDonald's</span>
-                        <span class="brand-tag">Philips</span>
-                        <span class="brand-tag">BASF</span>
-                        <span class="brand-tag">Beeline</span>
-                        <span class="brand-tag">Sber</span>
-                        <span class="brand-tag">TEVA</span>
-                        <span class="brand-tag">Novartis</span>
-                        <span class="brand-tag">Ferrero</span>
-                        <span class="brand-tag">Invitro</span>
-                        <span class="brand-tag">re:Store</span>
-                        <span class="brand-tag">Qatar</span>
-                        <span class="brand-tag">Haval</span>
-                        <span class="brand-tag">Xiaomi</span>
-                        <span class="brand-tag">Joom</span>
-                        <span class="brand-tag">LG</span>
-                        <span class="brand-tag">Правительство Москвы</span>
-                    </div>
+                    <p class="about-text">Работал в агентствах <strong>Havas Creative Group, Louder, Leo Burnett</strong>.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <section class="clients-section">
+        <div class="container">
+            <h2>Клиенты</h2>
+            <p class="section-intro">Работал с брендами, чьи решения влияют на миллионы людей.</p>
+            <div class="clients-grid">
+                <div class="client-item">Porsche</div>
+                <div class="client-item">adidas</div>
+                <div class="client-item">Heineken</div>
+                <div class="client-item">Bacardi</div>
+                <div class="client-item">Diageo</div>
+                <div class="client-item">Audi</div>
+                <div class="client-item">Coca-Cola</div>
+                <div class="client-item">Mars</div>
+                <div class="client-item">McDonald's</div>
+                <div class="client-item">Philips</div>
+                <div class="client-item">BASF</div>
+                <div class="client-item">Beeline</div>
+                <div class="client-item">Sber</div>
+                <div class="client-item">TEVA</div>
+                <div class="client-item">Novartis</div>
+                <div class="client-item">Ferrero</div>
+                <div class="client-item">Invitro</div>
+                <div class="client-item">re:Store</div>
+                <div class="client-item">Qatar</div>
+                <div class="client-item">Haval</div>
+                <div class="client-item">Xiaomi</div>
+                <div class="client-item">Joom</div>
+                <div class="client-item">LG</div>
+                <div class="client-item">Правительство Москвы</div>
             </div>
         </div>
     </section>
