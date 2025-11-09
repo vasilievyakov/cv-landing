@@ -421,6 +421,90 @@
             font-weight: 500;
         }
 
+        /* Career Timeline */
+        .career-timeline {
+            position: relative;
+            margin: 60px 0;
+            padding-left: 40px;
+        }
+
+        .career-timeline::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--accent), rgba(215, 203, 164, 0.3));
+        }
+
+        .career-step {
+            position: relative;
+            margin-bottom: 48px;
+            padding-left: 48px;
+        }
+
+        .career-step:last-child {
+            margin-bottom: 0;
+        }
+
+        .career-marker {
+            position: absolute;
+            left: -32px;
+            top: 8px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--accent);
+            border: 3px solid var(--bg-color);
+            box-shadow: 0 0 0 4px rgba(215, 203, 164, 0.2);
+            z-index: 1;
+        }
+
+        .career-content {
+            padding: 32px;
+            background: var(--bg-card);
+            border-radius: 24px;
+            border: 1px solid rgba(215, 203, 164, 0.1);
+            transition: all 0.4s ease;
+        }
+
+        .career-step:hover .career-content {
+            transform: translateX(8px);
+            border-color: var(--accent);
+            box-shadow: 0 8px 32px rgba(215, 203, 164, 0.15);
+        }
+
+        .career-content strong {
+            display: block;
+            font-size: 24px;
+            color: var(--accent);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .career-role {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+
+        .career-content p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            margin-bottom: 0;
+        }
+
+        .career-content p:last-child {
+            margin-top: 12px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(215, 203, 164, 0.1);
+            font-style: italic;
+            color: var(--text-primary);
+        }
+
         /* Process Section */
         .process-steps {
             display: grid;
@@ -573,6 +657,18 @@
             .quote p {
                 font-size: 24px;
             }
+
+            .career-timeline {
+                padding-left: 32px;
+            }
+
+            .career-step {
+                padding-left: 40px;
+            }
+
+            .career-content {
+                padding: 24px;
+            }
         }
 
         @media (max-width: 768px) {
@@ -636,6 +732,42 @@
                 flex-direction: column;
                 align-items: center;
             }
+
+            .career-timeline {
+                padding-left: 24px;
+                margin: 40px 0;
+            }
+
+            .career-timeline::before {
+                left: 4px;
+            }
+
+            .career-step {
+                padding-left: 32px;
+                margin-bottom: 32px;
+            }
+
+            .career-marker {
+                left: -20px;
+                width: 12px;
+                height: 12px;
+            }
+
+            .career-content {
+                padding: 24px;
+            }
+
+            .career-content strong {
+                font-size: 20px;
+            }
+
+            .career-role {
+                font-size: 16px;
+            }
+
+            .career-content p {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
@@ -689,6 +821,49 @@
                         <span class="brand-tag">Joom</span>
                         <span class="brand-tag">LG</span>
                         <span class="brand-tag">Правительство Москвы</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <section>
+        <div class="container">
+            <h2>Карьера</h2>
+            <p class="section-intro">Путь от аналитика до директора по стратегии. С неожиданными поворотами и переходами между мирами.</p>
+            <div class="career-timeline">
+                <div class="career-step">
+                    <div class="career-marker"></div>
+                    <div class="career-content">
+                        <strong>Havas Creative Group</strong>
+                        <p class="career-role">Head of Strategy</p>
+                        <p>Управление стратегическим департаментом. Работа с глобальными брендами. Твист: параллельно запускал собственные проекты и изучал AI, пока все говорили про тренды.</p>
+                    </div>
+                </div>
+                <div class="career-step">
+                    <div class="career-marker"></div>
+                    <div class="career-content">
+                        <strong>Intterra</strong>
+                        <p class="career-role">Head of Communications and Digital Marketing</p>
+                        <p>Разработка моделей четырёх продуктов одной экосистемы. Совместное развитие продуктов с product owners. Управление командой внутреннего дизайна. Твист: из агентства ушёл в продукт, чтобы понять, как стратегия работает изнутри.</p>
+                    </div>
+                </div>
+                <div class="career-step">
+                    <div class="career-marker"></div>
+                    <div class="career-content">
+                        <strong>Creative Force</strong>
+                        <p class="career-role">Директор по стратегии / Креативный Директор</p>
+                        <p>Управление командой из 9 человек. Планирование проектов для разных каналов. Гибридные исследования для сложных рынков промышленности и сельского хозяйства. Партнёрство с BBDO. Твист: появились государственные клиенты — департаменты Правительства Москвы. Учился говорить на языке чиновников и бизнеса одновременно.</p>
+                    </div>
+                </div>
+                <div class="career-step">
+                    <div class="career-marker"></div>
+                    <div class="career-content">
+                        <strong>Аналитик</strong>
+                        <p class="career-role">Начало</p>
+                        <p>Работал с данными, искал паттерны, строил гипотезы. Твист: понял, что данные без смысла — это шум. Начал искать, где смысл рождается.</p>
                     </div>
                 </div>
             </div>
