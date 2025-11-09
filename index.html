@@ -6,6 +6,7 @@
     <title>Яков Васильев — стратег и консультант по AI</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -14,18 +15,14 @@
         }
 
         :root {
-            --bg-color: #000000;
-            --bg-alt: #000000;
-            --bg-card: #000000;
-            --text-primary: #FFFFFF;
-            --text-secondary: #6E6E73;
-            --accent: #86868B;
-            --accent-alt: #A1A1A6;
-            --accent-dark: #6E6E73;
-            --accent-glow: rgba(255, 255, 255, 0.05);
-            --border: rgba(255, 255, 255, 0.15);
-            --gradient-1: linear-gradient(135deg, #FFFFFF 0%, #A1A1A6 100%);
-            --gradient-2: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+            --bg-primary: #FAFAFA;
+            --bg-alt: #1C1C1C;
+            --text-primary: #111111;
+            --text-secondary: #666666;
+            --text-dark-bg: #F4F4F4;
+            --accent: #C9B585;
+            --border: #E0E0E0;
+            --max-width: 1200px;
         }
 
         html {
@@ -33,616 +30,334 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', sans-serif;
-            font-size: 17px;
-            line-height: 1.47059;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 18px;
+            line-height: 160%;
             font-weight: 400;
-            letter-spacing: -0.022em;
             color: var(--text-primary);
-            background-color: var(--bg-color);
+            background-color: var(--bg-primary);
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             overflow-x: hidden;
         }
 
-        /* Типографика: 3 размера */
-        .text-large {
-            font-size: 48px;
-            line-height: 1.2;
-        }
-
-        .text-medium {
-            font-size: 18px;
-            line-height: 1.8;
-        }
-
-        .text-small {
-            font-size: 14px;
-            line-height: 1.6;
-        }
-
+        /* Grid System: 12 columns, max-width 1200px */
         .container {
-            max-width: 980px;
+            max-width: var(--max-width);
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 80px;
         }
 
-        /* Hero Section - Jobs Style */
+        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
-            justify-content: center;
-            position: relative;
             padding: 0;
-            overflow: hidden;
+            position: relative;
+        }
+
+        .hero-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
         }
 
         .hero-content {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-            max-width: 1000px;
+            max-width: 65ch;
         }
 
         .hero h1 {
-            font-size: 80px;
+            font-family: 'Inter', sans-serif;
+            font-size: 56px;
+            line-height: 110%;
             font-weight: 600;
-            line-height: 1.05;
-            margin-bottom: 20px;
-            letter-spacing: -0.015em;
+            margin-bottom: 24px;
             color: var(--text-primary);
-            animation: fadeInUp 1s ease-out;
+            letter-spacing: -0.02em;
         }
 
-        .hero-tagline {
-            font-size: 32px;
+        .hero-subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 22px;
+            line-height: 140%;
             font-weight: 400;
-            line-height: 1.125;
-            margin-bottom: 30px;
             color: var(--text-secondary);
-            letter-spacing: 0.004em;
-            animation: fadeInUp 1s ease-out 0.2s both;
-        }
-
-        .hero-description {
-            font-size: 24px;
-            line-height: 1.45833;
-            margin-bottom: 50px;
-            color: var(--text-secondary);
-            max-width: 680px;
-            margin-left: auto;
-            margin-right: auto;
-            font-weight: 400;
-            letter-spacing: 0.011em;
-            animation: fadeInUp 1s ease-out 0.4s both;
+            margin-bottom: 48px;
         }
 
         .btn {
             display: inline-block;
-            padding: 14px 28px;
-            background: transparent;
+            padding: 16px 32px;
+            background-color: var(--accent);
             color: var(--text-primary);
             text-decoration: none;
-            border-radius: 0;
-            font-size: 17px;
-            font-weight: 400;
-            letter-spacing: -0.022em;
-            transition: all 0.2s ease;
-            border: 1px solid var(--border);
-            position: relative;
-            animation: fadeInUp 1s ease-out 0.6s both;
+            border-radius: 2px;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+            border: none;
         }
 
         .btn:hover {
-            border-color: var(--text-primary);
-            background: rgba(255, 255, 255, 0.05);
+            background-color: var(--text-primary);
+            color: var(--bg-primary);
         }
 
-        .btn:active {
-            opacity: 0.7;
+        .btn-black {
+            background-color: var(--text-primary);
+            color: var(--bg-primary);
         }
 
-        /* Sections - Jobs Style */
+        .btn-black:hover {
+            background-color: #000000;
+            opacity: 0.9;
+        }
+
+        /* Sections */
         section {
-            padding: 120px 0;
-            position: relative;
+            padding: 100px 0;
             opacity: 0;
-            transform: translateY(40px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
+            filter: blur(5px);
+            transition: opacity 0.8s cubic-bezier(0.25, 0.1, 0.25, 1),
+                        filter 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
         }
 
         section.visible {
             opacity: 1;
-            transform: translateY(0);
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            filter: blur(0);
         }
 
         h2 {
+            font-family: 'Inter', sans-serif;
             font-size: 56px;
+            line-height: 110%;
             font-weight: 600;
-            line-height: 1.07143;
-            margin-bottom: 20px;
-            letter-spacing: -0.005em;
-            position: relative;
-            display: block;
             color: var(--text-primary);
-        }
-
-        h2::after {
-            display: none;
-        }
-
-        h3 {
-            font-size: 28px;
-            font-weight: 600;
-            line-height: 1.14286;
-            margin-bottom: 19px;
-            letter-spacing: 0.007em;
-            color: var(--text-primary);
+            margin-bottom: 48px;
+            letter-spacing: -0.02em;
         }
 
         p {
-            margin-bottom: 19px;
-            color: var(--text-secondary);
-            font-size: 17px;
-            line-height: 1.47059;
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            line-height: 160%;
             font-weight: 400;
-            letter-spacing: -0.022em;
+            color: var(--text-primary);
+            margin-bottom: 48px;
+            max-width: 65ch;
         }
 
-        .section-intro {
-            font-size: 28px;
-            line-height: 1.14286;
-            color: var(--text-primary);
-            margin-bottom: 60px;
-            max-width: 680px;
+        .text-secondary {
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 150%;
+            font-style: italic;
             font-weight: 400;
-            letter-spacing: 0.007em;
         }
 
         /* About Section */
         .about-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 60% 40%;
             gap: 80px;
             align-items: start;
-            margin-top: 60px;
         }
 
         .about-text {
-            font-size: 17px;
-            line-height: 1.47059;
-            font-weight: 400;
-            letter-spacing: -0.022em;
+            margin-bottom: 48px;
         }
 
-        /* Clients Section - Jobs Style */
-        .clients-section {
-            background: var(--bg-color);
-            position: relative;
-            overflow: hidden;
+        .about-text:last-child {
+            margin-bottom: 0;
         }
 
-        .clients-grid {
+        /* Formats Section - Cards */
+        .formats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 24px;
-            margin-top: 60px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .client-item {
-            padding: 32px 24px;
-            background: transparent;
-            border: 1px solid var(--border);
-            border-radius: 0;
-            font-size: 19px;
-            color: var(--text-secondary);
-            text-align: center;
-            font-weight: 400;
-            letter-spacing: -0.019em;
-            transition: all 0.2s ease;
-            position: relative;
-        }
-
-        .client-item:hover {
-            border-color: var(--text-primary);
-            color: var(--text-primary);
-            background: rgba(255, 255, 255, 0.03);
-        }
-
-        /* Current Section */
-        .current-items {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 40px;
-            margin-top: 60px;
+            margin-top: 48px;
         }
 
-        .current-item {
-            padding: 0;
-            background: transparent;
-            border: none;
-            border-radius: 0;
-            transition: all 0.2s ease;
-            position: relative;
+        .format-card {
+            background-color: var(--bg-primary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            min-height: 280px;
+            transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
         }
 
-        .current-item strong {
-            display: block;
-            font-size: 32px;
-            color: var(--text-primary);
-            margin-bottom: 12px;
+        .format-card:hover {
+            border-color: var(--accent);
+        }
+
+        .format-card h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 20px;
             font-weight: 600;
-            line-height: 1.125;
-            letter-spacing: 0.004em;
-        }
-
-        /* Quote Section - Jobs Style */
-        .quote {
-            padding: 0;
-            background: transparent;
-            border-radius: 0;
-            border: none;
-            position: relative;
-            margin: 60px 0 0 0;
-            font-size: 32px;
-            line-height: 1.125;
+            line-height: 140%;
             color: var(--text-primary);
-            font-weight: 400;
-            letter-spacing: 0.004em;
-        }
-
-        .quote p {
-            margin-bottom: 30px;
-            font-size: 32px;
-            line-height: 1.125;
-            position: relative;
-            z-index: 1;
-            font-weight: 400;
-            letter-spacing: 0.004em;
-        }
-
-        .quote p:last-child {
-            margin-bottom: 0;
-        }
-
-        /* Formats Table - Jobs Style */
-        .formats-section {
-            background: transparent;
-            border-radius: 0;
-            padding: 0;
-            margin: 60px 0 0 0;
-        }
-
-        .table-wrapper {
-            overflow-x: auto;
-            margin: 60px 0 0 0;
-            border-radius: 0;
-            background: transparent;
-            border: none;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: separate;
-            border-spacing: 0;
-            font-size: 17px;
-            background: transparent;
-        }
-
-        table thead {
-            border-bottom: 1px solid var(--border);
-        }
-
-        table th {
-            padding: 16px 0;
-            text-align: left;
-            font-weight: 400;
-            color: var(--text-secondary);
-            font-size: 17px;
-            text-transform: none;
-            letter-spacing: -0.022em;
-            border-bottom: 1px solid var(--border);
-            background: transparent;
-        }
-
-        table th:first-child {
-            padding-left: 0;
-        }
-
-        table th:last-child {
-            padding-right: 0;
-            text-align: right;
-        }
-
-        table tbody tr {
-            border-bottom: 1px solid var(--border);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        table tbody tr:last-child {
-            border-bottom: 1px solid var(--border);
-        }
-
-        table td {
-            padding: 24px 0;
-            color: var(--text-secondary);
-            vertical-align: top;
-            font-size: 19px;
-            line-height: 1.47368;
-            font-weight: 400;
-            letter-spacing: -0.019em;
-        }
-
-        table td:first-child {
-            padding-left: 0;
-            color: var(--text-primary);
-            font-weight: 600;
-            min-width: 200px;
-        }
-
-        table td:last-child {
-            padding-right: 0;
-            color: var(--text-primary);
-            font-weight: 500;
-            text-align: right;
-            white-space: nowrap;
-        }
-
-        table tbody tr:hover {
-            background: rgba(255, 255, 255, 0.02);
-        }
-
-        table tbody tr:hover td {
-            color: var(--text-primary);
-        }
-
-        table tbody tr:hover td:last-child {
-            color: var(--text-primary);
-        }
-
-        /* Career Timeline */
-        .career-timeline {
-            position: relative;
-            margin: 60px 0 0 0;
-            padding-left: 40px;
-        }
-
-        .career-timeline::before {
-            content: '';
-            position: absolute;
-            left: 6px;
-            top: 0;
-            bottom: 0;
-            width: 1px;
-            background: var(--border);
-        }
-
-        .career-step {
-            position: relative;
-            margin-bottom: 60px;
-            padding-left: 48px;
-        }
-
-        .career-step:last-child {
-            margin-bottom: 0;
-        }
-
-        .career-marker {
-            position: absolute;
-            left: -32px;
-            top: 8px;
-            width: 12px;
-            height: 12px;
-            border-radius: 0;
-            background: var(--text-primary);
-            border: 2px solid var(--bg-color);
-            opacity: 0.4;
-            z-index: 1;
-        }
-
-        .career-content {
-            padding: 0;
-            background: transparent;
-            border-radius: 0;
-            border: none;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .career-step:hover .career-content {
-            border-color: transparent;
-        }
-
-        .career-content strong {
-            display: block;
-            font-size: 32px;
-            color: var(--text-primary);
-            margin-bottom: 8px;
-            font-weight: 600;
-            line-height: 1.125;
-            letter-spacing: 0.004em;
-        }
-
-        .career-role {
-            font-size: 21px;
-            color: var(--text-secondary);
             margin-bottom: 16px;
-            font-weight: 400;
-            line-height: 1.381;
-            letter-spacing: 0.011em;
         }
 
-        .career-content p {
-            font-size: 19px;
-            line-height: 1.47368;
-            color: var(--text-secondary);
-            margin-bottom: 0;
-            font-weight: 400;
-            letter-spacing: -0.019em;
-        }
-
-        .career-content p:last-child {
-            margin-top: 16px;
-            padding-top: 16px;
-            border-top: 1px solid rgba(215, 203, 164, 0.1);
-            color: var(--text-secondary);
-        }
-
-        .career-content p:last-child strong {
-            color: var(--text-primary);
+        .format-card p {
             font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 8px;
+            line-height: 160%;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+            flex-grow: 1;
         }
 
-        /* Process Section */
+        .format-card .format-benefit {
+            font-size: 18px;
+            line-height: 160%;
+            color: var(--text-primary);
+            margin-bottom: 24px;
+            font-weight: 500;
+        }
+
+        .format-card .format-price {
+            font-size: 18px;
+            line-height: 160%;
+            color: var(--text-primary);
+            margin-top: auto;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            font-weight: 500;
+        }
+
+        /* Philosophy/Quote Section */
+        .philosophy {
+            background-color: var(--bg-alt);
+            color: var(--text-dark-bg);
+            padding: 200px 0;
+            text-align: center;
+        }
+
+        .philosophy-content {
+            max-width: 70ch;
+            margin: 0 auto;
+        }
+
+        .philosophy-quote {
+            font-family: 'Inter', sans-serif;
+            font-size: 28px;
+            line-height: 130%;
+            font-weight: 300;
+            font-style: italic;
+            color: var(--text-dark-bg);
+            margin: 0;
+        }
+
+        @media (min-width: 769px) {
+            .philosophy-quote {
+                font-size: 32px;
+            }
+        }
+
+        .philosophy-quote p {
+            color: var(--text-dark-bg);
+            margin-bottom: 24px;
+            max-width: none;
+        }
+
+        .philosophy-quote p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Process Section - 5 Steps */
         .process-steps {
             display: grid;
-            gap: 50px;
-            margin: 60px 0 0 0;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 0;
+            margin-top: 48px;
+            position: relative;
         }
 
         .process-step {
-            display: grid;
-            grid-template-columns: 80px 1fr;
-            gap: 40px;
-            padding: 0;
-            background: transparent;
-            border-radius: 0;
-            border: none;
-            transition: all 0.2s ease;
+            padding: 0 40px;
+            position: relative;
         }
 
-        .process-step:hover {
-            border-color: transparent;
+        .process-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background-color: var(--border);
         }
 
         .step-number {
+            font-family: 'Inter', sans-serif;
             font-size: 48px;
             font-weight: 600;
-            color: var(--text-primary);
             line-height: 1;
-            letter-spacing: -0.005em;
+            color: var(--text-primary);
+            margin-bottom: 24px;
             opacity: 0.6;
         }
 
         .step-content strong {
             display: block;
-            font-size: 32px;
-            color: var(--text-primary);
-            margin-bottom: 12px;
+            font-family: 'Inter', sans-serif;
+            font-size: 20px;
             font-weight: 600;
-            line-height: 1.125;
-            letter-spacing: 0.004em;
-        }
-
-        /* Contacts - Jobs Style */
-        .contacts {
-            background: transparent;
-            border-radius: 0;
-            padding: 120px 0;
-            text-align: center;
-            border: none;
-        }
-
-        .contact-links {
-            display: flex;
-            gap: 32px;
-            justify-content: center;
-            margin: 32px 0;
-            flex-wrap: wrap;
-        }
-
-        .contact-links a {
-            font-size: 21px;
+            line-height: 140%;
             color: var(--text-primary);
-            text-decoration: none;
-            padding: 0;
-            border: none;
-            border-radius: 0;
-            transition: all 0.2s ease;
-            letter-spacing: 0.011em;
-            font-weight: 400;
-            text-transform: none;
-        }
-
-        .contact-links a:hover {
-            opacity: 0.6;
-        }
-
-        .divider {
-            height: 1px;
-            background: var(--border);
-            margin: 120px 0;
-            border: none;
-        }
-
-        strong {
-            font-weight: 600;
-            color: var(--text-primary);
-        }
-
-        a {
-            color: var(--text-primary);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            opacity: 0.6;
-        }
-
-        ul {
-            list-style: none;
-            margin: 24px 0;
-        }
-
-        ul li {
             margin-bottom: 16px;
-            padding-left: 32px;
-            position: relative;
-            color: var(--text-secondary);
+        }
+
+        .step-content p {
             font-size: 18px;
-            line-height: 1.8;
-        }
-
-        ul li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
+            line-height: 160%;
             color: var(--text-secondary);
-            font-weight: 600;
-            opacity: 0.5;
+            margin-bottom: 0;
         }
 
-        /* Philosophy Quote */
-        .philosophy-quote {
-            margin-top: 60px;
-            padding: 0;
-            background: transparent;
-            border-radius: 0;
-            border: none;
+        /* Contacts Section - Apple Style */
+        .contacts {
+            text-align: center;
+            padding: 100px 0;
         }
 
-        .philosophy-quote p {
-            font-size: 24px;
-            line-height: 1.45833;
+        .contacts h2 {
+            margin-bottom: 48px;
+        }
+
+        .contacts p {
+            margin: 0 auto 48px;
+            max-width: 65ch;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            line-height: 150%;
+            color: var(--text-secondary);
+            margin-top: 48px;
+        }
+
+        .contact-info a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+
+        .contact-info a:hover {
             color: var(--text-primary);
-            font-weight: 400;
-            letter-spacing: 0.011em;
         }
 
         /* Responsive */
@@ -653,32 +368,33 @@
 
             .about-grid {
                 grid-template-columns: 1fr;
-                gap: 40px;
+                gap: 48px;
             }
 
-            .formats-section {
-                padding: 40px 30px;
+            .formats-grid {
+                grid-template-columns: 1fr;
             }
 
-            .quote {
-                padding: 40px 30px;
-                font-size: 18px;
+            .process-steps {
+                grid-template-columns: 1fr;
+                gap: 48px;
             }
 
-            .quote p {
-                font-size: 18px;
+            .hero-wrapper {
+                grid-template-columns: 1fr;
             }
 
-            .career-timeline {
-                padding-left: 32px;
+            .process-step {
+                padding: 0;
             }
 
-            .career-step {
-                padding-left: 40px;
+            .process-step:not(:last-child)::after {
+                display: none;
             }
 
-            .career-content {
-                padding: 24px;
+            .process-step:not(:last-child) {
+                padding-bottom: 48px;
+                border-bottom: 1px solid var(--border);
             }
         }
 
@@ -693,376 +409,199 @@
 
             .hero {
                 min-height: auto;
-                padding: 60px 0;
+                padding: 80px 0;
             }
 
-            .current-items {
-                grid-template-columns: 1fr;
+            .hero h1 {
+                font-size: 40px;
             }
 
-            .formats-section {
-                padding: 40px 24px;
-                border-radius: 24px;
+            .hero-subtitle {
+                font-size: 20px;
             }
 
-            .quote {
-                padding: 40px 24px;
-                font-size: 18px;
+            h2 {
+                font-size: 40px;
             }
 
-            .quote p {
-                font-size: 18px;
+            .philosophy {
+                padding: 120px 0;
             }
 
-            .quote::before {
-                font-size: 80px;
-                top: 20px;
-                left: 20px;
+            .philosophy-quote {
+                font-size: 24px;
             }
 
-            table {
-                font-size: 14px;
+            .format-card {
+                padding: 32px;
+                min-height: auto;
             }
 
-            table th,
-            table td {
-                padding: 12px;
-            }
-
-            table td:first-child,
-            table th:first-child {
-                padding-left: 16px;
-            }
-
-            table td:last-child,
-            table th:last-child {
-                padding-right: 16px;
-            }
-
-            .process-step {
-                grid-template-columns: 60px 1fr;
-                gap: 24px;
-                padding: 24px;
-            }
-
-            .contacts {
-                padding: 60px 30px;
-            }
-
-            .contact-links {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .career-timeline {
-                padding-left: 24px;
-                margin: 40px 0;
-            }
-
-            .career-timeline::before {
-                left: 4px;
-            }
-
-            .career-step {
-                padding-left: 32px;
-                margin-bottom: 32px;
-            }
-
-            .career-marker {
-                left: -20px;
-                width: 12px;
-                height: 12px;
-            }
-
-            .career-content {
-                padding: 24px;
-            }
-
-            .career-content strong {
-                font-size: 18px;
-            }
-
-            .career-role {
-                font-size: 18px;
-            }
-
-            .career-content p {
-                font-size: 18px;
+            .step-number {
+                font-size: 36px;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1>Мир ускоряется быстрее,<br>чем мы успеваем понимать</h1>
-                <p class="hero-tagline">Я помогаю не догонять, а осмыслять</p>
-                <p class="hero-description">Работаю с руководителями и командами. Технология, стратегия и мышление говорят на одном языке. Через понимание, а не через тренды.</p>
-                <a href="#contact" class="btn">Обсудить задачу</a>
+            <div class="hero-wrapper">
+                <div class="hero-content">
+                    <h1>Мир ускоряется быстрее,<br>чем мы успеваем понимать.</h1>
+                    <p class="hero-subtitle">Я помогаю не догонять, а осмыслять.</p>
+                    <p class="hero-subtitle">Работаю с руководителями и командами, чтобы технология, стратегия и мышление говорили на одном языке.</p>
+                    <a href="#contact" class="btn">Обсудить задачу</a>
+                </div>
+                <div></div>
             </div>
         </div>
     </section>
 
-    <hr class="divider">
-
+    <!-- About Section -->
     <section>
         <div class="container">
             <h2>Обо мне</h2>
             <div class="about-grid">
                 <div>
-                    <p class="section-intro"><strong>Яков Васильев</strong>. Стратег, исследователь и консультант по AI. Пятнадцать лет на стыке стратегии, культуры и технологий.</p>
-                    <p class="about-text">Путь от аналитика до директора по стратегии в крупнейших международных агентствах. Управлял стратегическим департаментом в <strong>Havas Creative Group</strong>. Работал в <strong>Leo Burnett</strong> и <strong>Louder</strong> над проектами, где решения влияют на миллионы людей. Получал и судил награды в России и Crystal Festival. Помогаю брендам выстраивать смысловую структуру бизнеса. Решения рождаются из понимания, а не из шума.</p>
-                    <p class="about-text" style="margin-top: 24px; color: var(--text-primary); font-weight: 500;">Награды: Silver Mercury, Effie, Crystal Festival (получение и судейство), BEMA</p>
+                    <p class="about-text"><strong>Яков Васильев — стратег, исследователь и консультант по AI.</strong></p>
+                    <p class="about-text">Более пятнадцати лет я работаю на стыке стратегии, культуры и технологий. Помогаю брендам и командам выстраивать смысловую структуру бизнеса, где решения рождаются из понимания, а не из шума.</p>
+                    <p class="about-text">Мой интерес — как мышление превращается в систему действий, и как эта система становится устойчивой частью бизнеса.</p>
                 </div>
                 <div>
-                    <p class="about-text">Работал в агентствах <strong>Havas Creative Group, Louder, Leo Burnett</strong>.</p>
+                    <p class="about-text">Работал в агентствах <strong>Havas, Louder, Intterra, Leo Burnett</strong>, для брендов <strong>Porsche, adidas, Heineken, Bacardi, Diageo, Audi, Coca-Cola, Mars, McDonald's, Philips, BASF, Beeline, Sber, TEVA, Novartis, Ferrero, Invitro</strong> и других.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <hr class="divider">
-
-    <section class="clients-section">
-        <div class="container">
-            <h2>Клиенты</h2>
-            <p class="section-intro">Работал с брендами, чьи решения влияют на миллионы людей.</p>
-            <div class="clients-grid">
-                <div class="client-item">Porsche</div>
-                <div class="client-item">adidas</div>
-                <div class="client-item">Heineken</div>
-                <div class="client-item">Bacardi</div>
-                <div class="client-item">Diageo</div>
-                <div class="client-item">Audi</div>
-                <div class="client-item">Coca-Cola</div>
-                <div class="client-item">Mars</div>
-                <div class="client-item">McDonald's</div>
-                <div class="client-item">Philips</div>
-                <div class="client-item">BASF</div>
-                <div class="client-item">Beeline</div>
-                <div class="client-item">Sber</div>
-                <div class="client-item">TEVA</div>
-                <div class="client-item">Novartis</div>
-                <div class="client-item">Ferrero</div>
-                <div class="client-item">Invitro</div>
-                <div class="client-item">re:Store</div>
-                <div class="client-item">Qatar</div>
-                <div class="client-item">Haval</div>
-                <div class="client-item">Xiaomi</div>
-                <div class="client-item">Joom</div>
-                <div class="client-item">LG</div>
-            </div>
-        </div>
-    </section>
-
-    <hr class="divider">
-
-    <section>
-        <div class="container">
-            <h2>Карьера</h2>
-            <p class="section-intro">Путь от аналитика до директора по стратегии в крупнейших международных агентствах. Рост экспертизы через проекты, где решения влияют на миллионы людей.</p>
-            <div class="career-timeline">
-                <div class="career-step">
-                    <div class="career-marker"></div>
-                    <div class="career-content">
-                        <strong>Havas Creative Group</strong>
-                        <p class="career-role">Head of Strategy</p>
-                        <p>Управление стратегическим департаментом одного из крупнейших международных агентств. Работа с глобальными брендами, где каждый проект — это вызов масштаба и сложности. Формирование стратегического мышления на уровне, где решения влияют на миллионы людей.</p>
-                    </div>
-                </div>
-                <div class="career-step">
-                    <div class="career-marker"></div>
-                    <div class="career-content">
-                        <strong>Louder</strong>
-                        <p class="career-role">Стратег</p>
-                        <p>Работа в международном агентстве с фокусом на сложные коммуникационные задачи. Проекты, где нужно было не просто создать стратегию, а переосмыслить подход к бренду. Клиенты, которые требовали не стандартных решений, а глубокого понимания их бизнеса и аудитории.</p>
-                    </div>
-                </div>
-                <div class="career-step">
-                    <div class="career-marker"></div>
-                    <div class="career-content">
-                        <strong>Leo Burnett</strong>
-                        <p class="career-role">Стратег</p>
-                        <p>Начало в легендарном международном агентстве. Работа с брендами, чьи имена знает весь мир. Задачи, где масштаб измерялся не только бюджетами, но и влиянием на культуру. Здесь формировалось понимание того, что стратегия — это не про слайды, а про то, как бренд живёт в сознании людей.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <hr class="divider">
-
-    <section>
-        <div class="container">
-            <h2>Сейчас</h2>
-            <p class="section-intro">Развиваю проекты, где компании используют AI осознанно, а стратегии становятся практикой мышления, а не набором слайдов.</p>
-            <div class="current-items">
-                <div class="current-item">
-                    <strong>AI Moment</strong>
-                    <p>Интенсив о новой грамотности в работе с нейросетями. Не про промпты. Про то, как изменить процесс мышления и принятия решений.</p>
-                </div>
-                <div class="current-item">
-                    <strong>Консультации и внедрение</strong>
-                    <p>AI-инструменты под реальные процессы. От идеи до работающей системы, которая экономит время.</p>
-                </div>
-                <div class="current-item">
-                    <strong>Воркшопы для топ-команд</strong>
-                    <p>Феноменология, диалектика и герменевтика управленческих решений. Пространство для мышления, которого не хватает в корпоративной реальности.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <hr class="divider">
-
-    <section>
-        <div class="container">
-            <h2>Как я работаю</h2>
-            <div class="quote">
-                <p>Стратегия это не отчёт. Это способ видеть взаимосвязи.</p>
-                <p>Соединяю аналитику, культуру и технологии. Из хаоса данных рождается смысл.</p>
-                <p>Работаем спокойно и глубоко. Сначала видим, потом делаем.</p>
-            </div>
-        </div>
-    </section>
-
-    <hr class="divider">
-
+    <!-- Formats Section -->
     <section>
         <div class="container">
             <h2>Форматы</h2>
-            <div class="formats-section">
-                <div class="table-wrapper">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Формат</th>
-                                <th>Что происходит</th>
-                                <th>Что вы получаете</th>
-                                <th>Артефакт</th>
-                                <th>Стоимость</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>AI-интенсивы для команд</strong></td>
-                                <td>Три сессии по 2,5 часа. Работаем на ваших задачах. Разбираем процессы, создаём шаблоны и инструменты.</td>
-                                <td>Команда использует AI системно и осознанно. Скорость и качество растут.</td>
-                                <td>Набор шаблонов, чек-листы, инструкции, запись сессий</td>
-                                <td>от € 3500<br>команда до 10 чел.</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Стратегическая платформа</strong></td>
-                                <td>Определяем позиционирование, структуру бренда, tone of voice и коммуникационную рамку.</td>
-                                <td>Чёткий смысл, понятная логика, визуально-вербальная целостность бренда.</td>
-                                <td>Стратегическая платформа (PDF), tone of voice гайд, коммуникационная рамка</td>
-                                <td>от € 3000</td>
-                            </tr>
-                            <tr>
-                                <td><strong>AI-системы под задачу</strong></td>
-                                <td>Проектирование и внедрение решений: боты, RAG-системы, генераторы, дашборды.</td>
-                                <td>Рабочие инструменты, которые экономят время и снижают рутину.</td>
-                                <td>Рабочая система, документация, инструкции по использованию</td>
-                                <td>от € 4000</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Индивидуальные консультации</strong></td>
-                                <td>Персональные стратегические сессии онлайн или офлайн. Минимум 2 часа, рекомендовано 5+.</td>
-                                <td>Структурируем задачу, находим противоречия, выстраиваем направление.</td>
-                                <td>Резюме сессии, структурированные выводы, план действий</td>
-                                <td>€ 250 / ч</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Программа консультаций и внедрения</strong></td>
-                                <td>Два месяца плотной совместной работы. Еженедельные встречи, пошаговое внедрение инструментов.</td>
-                                <td>Рабочая AI-система под ваш контекст. Обученная команда.</td>
-                                <td>AI-система, документация, обученная команда, roadmap развития</td>
-                                <td>€ 12 000<br>2 мес.</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Осмысление бизнеса для C-level</strong></td>
-                                <td>Серия воркшопов через феноменологию, диалектику и герменевтику управленческих решений.</td>
-                                <td>Руководители переосмысливают бизнес как живую систему. Находят язык для разговоров о сути и будущем.</td>
-                                <td>Протоколы воркшопов, карта понимания бизнеса, язык для диалога</td>
-                                <td>€ 6000<br>модуль</td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <div class="formats-grid">
+                <div class="format-card">
+                    <h3>AI-интенсивы для команд</h3>
+                    <p>Три сессии по 2,5 ч. Работаем на ваших задачах. Разбираем процессы, создаём шаблоны и инструменты.</p>
+                    <p class="format-benefit">Команда начинает использовать AI системно и осознанно, с ростом скорости и качества.</p>
+                    <div class="format-price">от €3500 / команда до 10 чел.</div>
                 </div>
+                <div class="format-card">
+                    <h3>Стратегическая платформа (без исследования)</h3>
+                    <p>Определяем позиционирование, структуру бренда, tone of voice и коммуникационную рамку.</p>
+                    <p class="format-benefit">Чёткий смысл, понятная логика и визуально-вербальная целостность бренда.</p>
+                    <div class="format-price">от €3000</div>
+                </div>
+                <div class="format-card">
+                    <h3>AI-системы под задачу</h3>
+                    <p>Проектирование и внедрение решений (боты, RAG-системы, генераторы, дашборды).</p>
+                    <p class="format-benefit">Рабочие инструменты, которые действительно экономят время и снижают рутину.</p>
+                    <div class="format-price">от €4000</div>
+                </div>
+                <div class="format-card">
+                    <h3>Индивидуальные консультации</h3>
+                    <p>Персональные стратегические сессии онлайн или офлайн. Минимум 2 ч, рекомендовано 5+.</p>
+                    <p class="format-benefit">Структурируем задачу, находим противоречия, выстраиваем направление.</p>
+                    <div class="format-price">€250 / ч</div>
+                </div>
+                <div class="format-card">
+                    <h3>Программа консультаций и внедрения</h3>
+                    <p>Два месяца плотной совместной работы. Еженедельные встречи, пошаговое внедрение инструментов.</p>
+                    <p class="format-benefit">Рабочая AI-система под ваш контекст и обученная команда.</p>
+                    <div class="format-price">€12000 / 2 мес.</div>
+                </div>
+                <div class="format-card">
+                    <h3>Совместное осмысление бизнеса для C-level</h3>
+                    <p>Серия воркшопов через феноменологию, диалектику и герменевтику управленческих решений.</p>
+                    <p class="format-benefit">Руководители переосмысливают бизнес как живую систему, находят язык для разговоров о сути и будущем.</p>
+                    <div class="format-price">€6000 / модуль</div>
+                </div>
+            </div>
+            <div class="philosophy-format" style="margin-top: 100px; padding: 60px 0; border-top: 1px solid var(--border);">
+                <h3 style="font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 600; line-height: 140%; color: var(--text-primary); margin-bottom: 24px;">Философия формата для C-level</h3>
+                <p style="font-family: 'Inter', sans-serif; font-size: 18px; line-height: 160%; color: var(--text-primary); margin-bottom: 16px; max-width: 65ch;">Это не тренинг и не фасилитация.</p>
+                <p style="font-family: 'Inter', sans-serif; font-size: 18px; line-height: 160%; color: var(--text-primary); margin-bottom: 16px; max-width: 65ch;">Это пространство для мышления — редкое в корпоративной реальности.</p>
+                <p style="font-family: 'Inter', sans-serif; font-size: 18px; line-height: 160%; color: var(--text-primary); margin-bottom: 0; max-width: 65ch;">Мы исследуем, <strong>как живёт бизнес</strong>, что его сдерживает, и как заново выстроить понимание между людьми, решениями и контекстом.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="philosophy">
+        <div class="container">
+            <div class="philosophy-content">
                 <div class="philosophy-quote">
-                    <h3>Философия формата для C-level</h3>
-                    <p>Это не тренинг и не фасилитация. Это пространство для мышления, редкое в корпоративной реальности. Исследуем, <strong>как живёт бизнес</strong>, что его сдерживает, как выстроить понимание между людьми, решениями и контекстом.</p>
+                    <p>Мы не ускоряем мышление.</p>
+                    <p>Мы возвращаем ему глубину.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <hr class="divider">
-
+    <!-- Process Section -->
     <section>
         <div class="container">
             <h2>Как всё устроено</h2>
             <div class="process-steps">
                 <div class="process-step">
-                    <div class="step-number">01</div>
+                    <div class="step-number">1</div>
                     <div class="step-content">
                         <strong>Знакомство</strong>
-                        <p>Короткий созвон, чтобы понять задачу и контекст. Без продаж и презентаций. Просто разговор.</p>
+                        <p>Короткий созвон, чтобы понять задачу и контекст.</p>
                     </div>
                 </div>
                 <div class="process-step">
-                    <div class="step-number">02</div>
+                    <div class="step-number">2</div>
                     <div class="step-content">
                         <strong>Формат</strong>
-                        <p>Предлагаю вариант работы и границы проекта. Понятно, что будет, сколько времени, что вы получите.</p>
+                        <p>Я предлагаю вариант работы и границы проекта.</p>
                     </div>
                 </div>
                 <div class="process-step">
-                    <div class="step-number">03</div>
+                    <div class="step-number">3</div>
                     <div class="step-content">
                         <strong>Согласование</strong>
-                        <p>Уточняем глубину, состав участников, сроки. Всё фиксируем, чтобы избежать недопониманий.</p>
+                        <p>Уточняем глубину, состав участников, сроки.</p>
                     </div>
                 </div>
                 <div class="process-step">
-                    <div class="step-number">04</div>
+                    <div class="step-number">4</div>
                     <div class="step-content">
                         <strong>Предоплата 50%</strong>
-                        <p>После подтверждения стартуем работу. Оплата: криптовалюта, рубли (ИП РФ) или через сербский бизнес-счёт.</p>
+                        <p>После подтверждения стартуем работу.</p>
                     </div>
                 </div>
                 <div class="process-step">
-                    <div class="step-number">05</div>
+                    <div class="step-number">5</div>
                     <div class="step-content">
                         <strong>Финал</strong>
-                        <p>Оплата второй части и передача всех материалов. Работаем до результата, не до дедлайна.</p>
+                        <p>Оплата второй части и передача всех материалов.</p>
                     </div>
                 </div>
             </div>
+            <p style="margin-top: 48px; color: var(--text-secondary); font-size: 15px; line-height: 150%; font-style: italic;">Оплата возможна: криптовалютой, рублями (ИП РФ) или через сербский бизнес-счёт.</p>
         </div>
     </section>
 
-    <hr class="divider">
-
+    <!-- Contacts Section -->
     <section id="contact" class="contacts">
         <div class="container">
             <h2>Контакты</h2>
-            <p class="section-intro">Если в вашей компании назрело время подумать о смысле и структуре, напишите.</p>
-            <p style="margin-bottom: 48px; color: var(--text-secondary);">Работаю только с теми, кому интересно понять, как всё устроено.</p>
-            <div class="contact-links">
+            <p>Если вы чувствуете, что в вашей компании назрело время подумать о смысле и структуре, напишите.</p>
+            <p>Работаю только с теми, кому действительно интересно понять, как всё устроено.</p>
+            <div class="contact-info">
                 <a href="mailto:hello@yakovvasiliev.com">hello@yakovvasiliev.com</a>
                 <a href="https://t.me/yakovvasiliev" target="_blank">@yakovvasiliev</a>
             </div>
-            <a href="mailto:hello@yakovvasiliev.com" class="btn" style="margin-top: 48px;">Обсудить задачу</a>
         </div>
     </section>
 
     <script>
-        // Intersection Observer для плавного появления секций
+        // Intersection Observer для плавного появления секций с blur
         const observerOptions = {
             threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
+            rootMargin: '0px 0px -50px 0px'
         };
 
         const observer = new IntersectionObserver((entries) => {
